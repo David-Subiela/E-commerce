@@ -1,0 +1,43 @@
+.container-img {
+  position: fixed;
+  height: 700px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.img-show {
+  display: block;
+  object-fit: cover;
+}
+img.img-show {
+  width: 375px;
+}
+
+/* .copy {
+  position: fixed;
+  color: #fff;
+  bottom: 14px;
+}
+ */
+svg.svg-inline--fa.fa-x {
+  position: absolute;
+  color: #fff;
+  top: 150px;
+  right: 300px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.move {
+  transform: translateX(0);
+}
+
+.container-img a {
+  color: #fff;
+  font-size: 40px;
+}

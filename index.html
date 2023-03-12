@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link rel="stylesheet" href="styles-img.css" type="text/css" />
+    <link rel="stylesheet" href="responsive.css" type="text/css" />
+    <link rel="stylesheet" href="styles-cookies.css" type="text/css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/img/favicon2.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Kamile EC - Ropa, Zapatos y Complementos</title>
+  </head>
+  <body>
+    <div class="flecha-arriba">
+      <img src="/img/flecha.png" alt="flecha" />
+    </div>
+    <div class="btn-whatsApp">
+      <a
+        href="https://api.whatsapp.com/send?phone=+"
+        class="btn-whatsApp"
+        id="tooltip"
+        target="_blank"
+      >
+        <i class="fa-brands fa-whatsapp"></i
+        ><span class="tooltip-box"
+          >Contáctanos para conocer MÁS SOBRE NUESTROS PRODUCTOS</span
+        >
+      </a>
+    </div>
+    <header>
+      <section class="encabezado-completo">
+        <div class="suscribete">
+          <p>Gastos de envío gratis a partir de 65$</p>
+          <!-- <p>
+            Suscríbete a la
+            <a class="newsletter" href="#enterate">newsletter</a>
+          </p> -->
+        </div>
+        <div class="encabezado-menu">
+          <div class="nav-icon-button" id="icon-button-appear">
+            <button>
+              <div></div>
+              <div></div>
+              <div></div>
+            </button>
+            <span class="tooltip-menu"
+              >Hola,<br />
+              ¿Ya eres de Kamile?
+              <button class="btn-light-menu">Identificarme</button>
+              <span class="menu-registrate">
+                ¿No tienes cuenta? <a class="register" href="#">Regístrate</a>
+                <div class="menu-aparece">
+                  <hr class="oculto" />
+                  <ul class="menu-encab-oculto">
+                    <li>
+                      <a href="#novedades">Novedades</a>
+                    </li>
+                    <li>
+                      <a href="#">Ropa</a>
+                    </li>
+                    <li>
+                      <a href="#">Zapatos</a>
+                    </li>
+                    <li>
+                      <a href="/complementos.html">Complementos</a>
+                    </li>
+                    <li>
+                      <a class="rebajas" href="#">Rebajas</a>
+                    </li>
+                  </ul>
+                </div>
+              </span>
+              <!-- <hr class="separa-tooltip" /> -->
+            </span>
+          </div>
+          <div class="nav-icons">
+            <div class="box">
+              <!-- <span>
+                <a href="#" title="Buscar">
+                  <i class="fa-solid fa-magnifying-glass" alt="Search"></i>
+                </a>
+              </span> -->
+              <input
+                type="text"
+                name="search"
+                placeholder="Busca aquí tu producto"
+                class="src"
+                id="autocomplete-input"
+                autocomplete="off"
+              />
+              <!-- <ul id="autocomplete-results" class="autocomplete-results">
+                <li></li>
+                <li></li>
+              </ul> -->
+            </div>
+            <a href="#" title="Mi cuenta">
+              <i class="fa-solid fa-person-half-dress fa-lg" alt="Login"></i>
+            </a>
+            <a href="#" title="Lista de deseos">
+              <i class="fa-regular fa-heart fa-lg" alt="Lista de deseos"></i>
+            </a>
+            <a href="#" title="Carro compra">
+              <i class="fa-solid fa-cart-shopping fa-lg" alt="Carro Compra"></i>
+            </a>
+          </div>
+        </div>
+        <div class="nombre-tienda">
+          <h1>KAMILE</h1>
+        </div>
+        <nav>
+          <!-- <hr class="separa-encab" /> -->
+          <ul class="menu-encab">
+            <li>
+              <a href="#novedades">Novedades</a>
+            </li>
+            <li>
+              <a href="#">Ropa</a>
+            </li>
+            <li>
+              <a href="#">Zapatos</a>
+            </li>
+            <li>
+              <a href="/complementos.html">Complementos</a>
+            </li>
+            <li>
+              <a class="rebajas" href="#">Rebajas</a>
+            </li>
+          </ul>
+        </nav>
+        <hr class="fin-encab" />
+      </section>
+    </header>
+    <article class="juntas">
+      <div class="imagen-detras">
+        <h1 class="secreto">
+          El secreto de un gran estilo <br />
+          es sentirte bien con lo que usas
+        </h1>
+        <div class="slider">
+          <ul>
+            <li><img src="/img/slider/Imagen1.jpg" alt="" /></li>
+            <li><img src="/img/slider/Imagen2.jpg" alt="" /></li>
+            <li><img src="/img/slider/Imagen3.jpg" alt="" /></li>
+            <li><img src="/img/slider/Imagen4.jpg" alt="" /></li>
+          </ul>
+          <div id="novedades"></div>
+        </div>
+      </div>
+    </article>
+    <section data-aos="fade-up" data-aos-duration="2000">
+      <div>
+        <h2 class="nov-semana">Novedades</h2>
+      </div>
+      <div class="contenedor-completo">
+        <div class="contenedor-uno" id="contenedor-heart">
+          <!-- <div class="contenedor-ampliar"> -->
+          <!-- <div class="corazon">
+              <i id="heart-color" class="far fa-heart"></i>
+            </div> -->
+          <!-- <img src="/img/fotos/Bolsos.png" alt="Bolsos" class="img-inicial" />
+            <div>
+              <span class="products"> Cartera (Crossbody)</span><br />
+              $25.00
+            </div>
+
+            <div class="container-img">
+              <a href="#img2">&#60;</a>
+              <img
+                src="/img/fotos/Bolsos2.png"
+                alt="Cartera (Crossbody)"
+                class="img-show"
+                id="img1"
+              />
+              <a href="#img2"> > </a>
+              <i class="fa-solid fa-x"></i>
+              <p class="copy"></p>
+            </div>
+
+            <div class="container-img">
+              <a href="#img3">&#60;</a>
+              <img
+                src="/img/fotos/Bolsos3.png"
+                alt="Cartera (Crossbody)"
+                class="img-show"
+                id="img2"
+              />
+              <a href="#img3"> > </a>
+              <i class="fa-solid fa-x"></i>
+              <p class="copy"></p>
+            </div>
+
+            <div class="container-img">
+              <a href="#img1">&#60;</a>
+              <img
+                src="/img/fotos/Bolsos.png"
+                alt="Cartera (Crossbody)"
+                class="img-show"
+                id="img3"
+              />
+              <a href="#img1"> > </a>
+              <i class="fa-solid fa-x"></i>
+              <p class="copy"></p>
+            </div> -->
+          <!-- </div> -->
+          <!-- <div class="contenedor-ampliar">
+            <div class="corazon">
+              <i class="far fa-heart"></i>
+            </div>
+            <img src="/img/fotos/Collares.png" alt="Collares" />
+            <div>
+              <span class="products"> Set de collares</span><br />
+              $11.00
+            </div>
+          </div>
+          <div class="contenedor-ampliar">
+            <div class="corazon">
+              <i class="far fa-heart"></i>
+            </div>
+            <img src="/img/fotos/Pendientes.png" alt="Pendientes" />
+            <div>
+              <span class="products"> Set de aretes Navideños</span><br />
+              $5.00
+            </div>
+          </div>
+          <div class="contenedor-ampliar">
+            <div class="corazon">
+              <i class="far fa-heart"></i>
+            </div>
+            <img src="/img/fotos/PendientesL.png" alt="PendientesXL" />
+            <div>
+              <span class="products">Set de aretes dorados</span><br />
+              $11.00
+            </div>
+          </div> -->
+        </div>
+        <div id="mostrarImagen" style="display: none" class="contenedor-dos">
+          <img src="/img/fotos/AnillosCuarzo.png" alt="Anillos Cuarzo" />
+          <img src="/img/fotos/CalcetinesNav.png" alt="Calcetines Navidad" />
+          <img src="/img/fotos/Conjunto.png" alt="Conjunto Verano" />
+          <img src="/img/fotos/VariasNov.png" alt="Conjunto Verano" />
+          <img src="/img/fotos/Falda.png" alt="Falda Blanca" />
+          <!-- <img src="/img/fotos/PendientesRed.png" alt="Pendientes Redondos" /> -->
+          <img src="/img/fotos/Renos.png" alt="Pendientes Reno Navidad" />
+        </div>
+        <button onclick="showHide()" class="btn-light">Ver más</button>
+      </div>
+    </section>
+    <hr class="separa-encab" />
+    <section class="imagen-envio">
+      <div class="titulo" data-aos="flip-right">
+        <a href="#">
+          <img src="/img/Envios/box-service-1.png" alt="Entrega Pedidos" />
+        </a>
+        <div class="envio">
+          <h3>Envíos a nivel nacional</h3>
+          <hr class="separar-envio" />
+          <a href="#">
+            <span class="entre24">Compras a partir de 35$</span>
+          </a>
+        </div>
+      </div>
+      <div class="titulo" data-aos="flip-right">
+        <a href="#">
+          <img src="/img/Envios/box-service-2.png" alt="Tiempo de envío" />
+        </a>
+        <div class="envio">
+          <h3>Tiempo de entrega</h3>
+          <hr class="separar-envio" />
+          <a href="#">
+            <span class="entre24">Entre 24 y 48 horas</span>
+          </a>
+        </div>
+      </div>
+      <div class="titulo" data-aos="flip-right">
+        <a href="#">
+          <img src="/img/Envios/box-service-3.png" alt="Garantía de calidad" />
+        </a>
+        <div class="envio">
+          <h3>Garantía de calidad</h3>
+          <hr class="separar-envio" />
+          <a href="#">
+            <span class="entre24">Empaquetado cuidadosamente</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <hr class="separa-encab" />
+    <section class="opinion" data-aos="fade-up" data-aos-duration="2000">
+      <h1 class="nov-escribenos">
+        Escríbenos a
+        <a href="https://www.google.com/intl/es/gmail/about/"
+          ><span class="name-change">Kamile</span></a
+        ><br />
+        y déjanos saber tú opinión
+      </h1>
+      <p>
+        ¿Necesitas asesoramiento? Escríbenos, <br />
+        estaremos encantados de poder ayudarte<br />
+        y asesorarte con cualquier duda.<br />
+        <a href="https://www.google.com/intl/es/gmail/about/" target="_blank">
+          <span class="mail">kamile.ec@gmail.es</span>
+        </a>
+      </p>
+      <!-- <div class="btn-escribe">
+        <a class="btn-light-two" href="#">Escríbenos aquí</a>
+      </div> -->
+    </section>
+    <section class="boletin">
+      <div class="enterate" id="enterate">
+        <h2>Entérate de todo</h2>
+        <div class="form">
+          <form action="#" method="POST">
+            <div class="name">
+              <label for="tnp-name">Nombre</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label for="tnp-email">Email</label>
+              <input type="email" />
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" />
+                Si continúas, aceptas la política de privacidad
+              </label>
+            </div>
+            <div>
+              <input type="submit" value="Suscribirse" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-clic">
+        <div class="siguenos">
+          <h5>Síguenos</h5>
+          <a href="https://es-es.facebook.com/" target="_blank"
+            ><i class="fa-brands fa-facebook fa-2x"></i>
+          </a>
+          <a href="https://www.instagram.com/kamile.ec/?hl=es" target="_blank">
+            <i class="fa-brands fa-instagram fa-2x"></i>
+          </a>
+        </div>
+        <div class="location-clic">
+          <h5>Contacto</h5>
+          <a href="https://www.google.com/intl/es/gmail/about/" target="_blank">
+            <i class="fa-solid fa-envelope"></i>
+            <span>kamile.ec@gmail.es</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-container">
+        <div class="footer_bottom">
+          <hr class="separa-encab" />
+          <div class="condiciones-politicas">
+            <a href="#" title="Condiciones de uso" target="_blank"
+              ><strong>CONDICIONES DE USO</strong></a
+            >
+            |
+            <a
+              href="/politicaPrivacidad/PoliticaPrivacidad.pdf"
+              title="Política de privacidad"
+              target="_blank"
+              >Política de privacidad</a
+            >
+            |
+            <a
+              href="/politicaPrivacidad/PoliticaCookies.pdf"
+              title="Politica de cookies"
+              target="_blank"
+              ><b>POLÍTICA DE COOKIES</b></a
+            >
+            |
+            <a href="#" title="Condiciones de Compra" target="_blank"
+              >Términos y condiciones de compra</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <p>
+          Made with <i class="fa fa-heart"></i> by
+          <a href="https://github.com/David-Subiela" target="_blank"
+            >David Subiela</a
+          >
+        </p>
+      </div>
+    </footer>
+    <div class="aviso-cookies" id="aviso-cookies">
+      <img class="galleta" src="./img/svg/cookie.svg" alt="Galleta" />
+      <h3 class="titulo">Cookies</h3>
+      <p class="parrafo">
+        Utilizamos cookies propias y de terceros para mejorar nuestros
+        servicios.
+      </p>
+      <button class="boton" id="btn-aceptar-cookies">De acuerdo</button>
+      <a class="enlace" href="aviso-cookies.html">Aviso de Cookies</a>
+    </div>
+    <div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 2000,
+      });
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+      integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
