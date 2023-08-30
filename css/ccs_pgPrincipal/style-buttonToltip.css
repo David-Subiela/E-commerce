@@ -1,0 +1,209 @@
+/* MENU FIJO */
+.fixed {
+  position: fixed;
+  width: 100%;
+  /* top: 6%; */
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+/* nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.4s ease;
+}
+nav.sticky {
+  background: var(--dark-rose);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+nav .nav-content {
+  height: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-content .nav-links {
+  display: flex;
+}
+.nav-content .nav-links li {
+  list-style: none;
+}
+
+nav.sticky .nav-links li a {
+  color: var(--white);
+  transition: all 0.4s ease;
+}
+nav.sticky .nav-links li a:hover {
+  color: var(--black);
+}
+ */
+/* MENU BUTTON*/
+.button-tooltip {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  border: 0;
+  background: transparent;
+  gap: 0.5rem;
+  margin: 5px 20px 0px 20px;
+  display: none;
+}
+.button-tooltip > div {
+  background: var(--black);
+  height: 3px;
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.5s;
+  transform-origin: left;
+}
+.button-tooltip:hover div:first-child {
+  transform: rotate(45deg);
+}
+.button-tooltip:hover div:nth-child(2) {
+  opacity: 0;
+}
+.button-tooltip:hover div:last-child {
+  transform: rotate(-45deg);
+}
+
+/* TOOLTIP AL PASAR POR ENCIMA DEL BOTON */
+
+.nav-icon-button:hover .tooltip-menu {
+  display: inline-block;
+}
+
+.tooltip-menu {
+  display: none;
+  width: 200px;
+  position: absolute;
+  background: #fff;
+  line-height: 20px;
+  z-index: 500;
+  color: var(--dark-rose);
+  font-weight: 700;
+  font-size: 15px;
+  margin: 10px;
+  padding: 15px 15px;
+  border-radius: 5px;
+  /* left: 0; */
+  right: 0;
+}
+
+.tooltip-menu::after {
+  content: "";
+  display: block;
+  border-top: 7px solid transparent;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #fff;
+  position: absolute;
+  top: -14px;
+  left: 168px;
+}
+
+/* PARAGRAFO MENÚ*/
+p.button-tooltip-menu {
+  text-align: center;
+  font-size: 12px;
+  display: none;
+}
+
+/* BOTON MENU*/
+.btn-light-menu {
+  margin-top: 15px;
+  margin-left: 9px;
+  margin-bottom: 9px;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: inline-block;
+  border: 0;
+  font-weight: bold;
+  padding: 15px;
+  color: var(--dark-rose);
+  font-size: 15px;
+  width: 150px;
+  height: 50px;
+  background-color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 2px solid var(--dark-rose);
+}
+.btn-light-menu:hover {
+  background-color: var(--dark-rose);
+  border: 2px solid var(--rose);
+  color: #fff;
+}
+
+.menu-registrate {
+  color: var(--black);
+}
+.menu-registrate .register {
+  text-decoration: underline;
+  color: var(--black);
+  padding-bottom: 5px;
+}
+
+.menu-encab-oculto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.menu-encab-oculto li {
+  text-transform: uppercase;
+  padding-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #828282;
+}
+
+.menu-encab-oculto a.rebajas {
+  color: red;
+}
+
+/* ESTILOS CARRO COMPRA CUANDO HACES SCROLL*/
+.carro-compra-oculto {
+  display: none;
+}
+.carro-compra-oculto a {
+  color: var(--black);
+  margin-left: 1120px;
+}
+.carro-compra-oculto a:hover {
+  color: var(--dark-rose);
+}
+.carro-compra-oculto svg.svg-inline--fa.fa-bag-shopping {
+  height: 2em;
+}
+
+/* Subrayado animado anchor (a): */
+.menu-encab-oculto a {
+  color: var(--black);
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+}
+/* Subrayado animado anchor (a), al pasar por encima: */
+.menu-encab-oculto li a:hover,
+.menu-encab-oculto li a:focus {
+  background-size: 100% 2px;
+}
+
+hr.oculto {
+  margin-top: 10px;
+}
+
+/* .menu-aparece {
+  display: none;
+}
+ */

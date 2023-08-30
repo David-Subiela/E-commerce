@@ -1,0 +1,148 @@
+.testimonial-opinion {
+  text-align: center;
+  margin: 35px;
+  text-decoration: underline var(--dark-rose);
+}
+
+.slide {
+  position: relative;
+  margin-top: 26px;
+}
+.slide-inner {
+  padding: 30px;
+  position: relative;
+  display: block;
+  background: var(--white);
+  color: var(--black);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 65px 250px;
+}
+
+.slide-open:checked + .slide-item {
+  position: static;
+  opacity: 100;
+}
+.slide-item {
+  position: absolute;
+  opacity: 0;
+  /* transition: opacity 0.6s ease-out; */ /* TRANSICIÓN AL CAMBIAR DE UNA OPINION A OTRA (TESTIMONIAL): */
+}
+
+.slide-control {
+  background: var(--light-rose);
+  border-radius: 50%;
+  color: var(--black);
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  /* position: fixed; */
+  top: 50%;
+  cursor: pointer;
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+.slide-control.prev {
+  /* left: 19%; */
+  left: 1%;
+}
+.slide-control.next {
+  /* right: 19%; */
+  right: 1%;
+}
+.slide-control:hover {
+  background: var(--dark-rose);
+  color: var(--white);
+}
+#slide-1:checked ~ .control-1,
+#slide-2:checked ~ .control-2,
+#slide-3:checked ~ .control-3,
+#slide-4:checked ~ .control-4,
+#slide-5:checked ~ .control-5 {
+  display: block;
+}
+.slide-indicador {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+.slide-indicador li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.slide-circulo {
+  color: var(--rose);
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+.slide-circulo:hover {
+  color: #aaaaaa;
+}
+#slide-1:checked ~ .control-1 ~ .slide-indicador li:nth-child(1) .slide-circulo,
+#slide-2:checked ~ .control-2 ~ .slide-indicador li:nth-child(2) .slide-circulo,
+#slide-3:checked ~ .control-3 ~ .slide-indicador li:nth-child(3) .slide-circulo,
+#slide-4:checked ~ .control-4 ~ .slide-indicador li:nth-child(4) .slide-circulo,
+#slide-5:checked
+  ~ .control-5
+  ~ .slide-indicador
+  li:nth-child(5)
+  .slide-circulo {
+  color: var(--dark-rose);
+}
+
+.inicial-area {
+  display: grid;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--white);
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.inicial-area p {
+  background: var(--dark-rose);
+  width: 50px;
+  height: 50px;
+  padding: 4px;
+  border-radius: 50%;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.slide-inner h5 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--dark-rose);
+  margin-top: 15px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 35px;
+}
+
+.stars {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+svg.svg-inline--fa.fa-star {
+  margin: 0 6px;
+  color: var(--dark-rose);
+  font-size: 25px;
+}
+
+.content {
+  padding-left: 35px;
+  padding-right: 25px;
+  margin-bottom: 35px;
+}

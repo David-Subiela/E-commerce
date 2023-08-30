@@ -1,0 +1,206 @@
+/* MODAL */
+.modal {
+  display: none; /* POR DEFECTE, ESTARÁ OCULTO */
+  position: fixed; /* POSICIÓN FIJA */
+  z-index: 1; /* Se situará por encima de otros elementos de la página*/
+  padding-top: 200px; /* El contenido estará situado a 200px de la parte superior */
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  overflow: auto; /* Se activará el scroll si es necesario */
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro con opacidad del 50% */
+}
+
+/* VENTANA MODAL */
+.contenido-modal {
+  position: relative; /* RELATIVO RESPECTO AL CONTENEDOR MODAL */
+  background-color: #f2f2f2;
+  margin: auto; /* CENTRADA */
+  padding: 20px;
+  width: 60%;
+  animation-name: animarsuperior;
+  animation-duration: 0.5s;
+}
+
+@keyframes animarsuperior {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* ------------------------------ COMPOSICIÓN ------------------------------------ */
+/* BOTÓN CERRAR */
+.close,
+.close-envi,
+.close-devol {
+  color: black;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus,
+.close-envi:hover,
+.close-envi:focus,
+.close-devol:hover,
+.close-devol:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* DENTRO DEL MODAL: */
+.cancelar-suscri-bis {
+  text-align: center;
+  padding: 20px;
+}
+.cancelar-suscri-parraf {
+  font-weight: 700;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+.cancelar-suscri-list {
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+/* ICONOS */
+.composition-imgs {
+  padding-left: 10px;
+}
+.composition-imgs img {
+  width: 15px;
+  margin-right: 10px;
+}
+
+/* ------------------------------ ENVIO ------------------------------------ */
+
+.envio-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.envio-list img {
+  width: 25px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: var(--rose);
+}
+.envio-list-one,
+.envio-list-two {
+  padding-bottom: 15px;
+}
+.aviso-pie {
+  margin-top: 5px;
+  font-size: 12px;
+  color: hsl(216, 2%, 60%);
+}
+
+/* ------------------------------ DEVOLUCIONES ------------------------------------ */
+
+.devol-parraf {
+  padding: 10px;
+}
+
+.devol-list {
+  text-align: center;
+  padding: 10px;
+}
+
+.free-gratis-one {
+  padding-left: 117px;
+}
+.free-gratis-two {
+  padding-left: 190px;
+}
+
+/* ------------------------------ GALERIA DE IMÁGENES MODAL ------------------------------------ */
+
+.modal-gallery {
+  width: 550px;
+  margin: 0 auto;
+}
+.modal-gallery__background {
+  display: none; /* POR DEFECTE, ESTARÁ OCULTO */
+  position: fixed; /* POSICIÓN FIJA */
+  z-index: 1; /* Se situará por encima de otros elementos de la página*/
+  padding-top: 100px; /* El contenido estará situado a 200px de la parte superior */
+  padding-bottom: 100px;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  overflow: auto; /* Se activará el scroll si es necesario */
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro con opacidad del 50% */
+}
+.modal-gallery__close-container {
+  text-align: right;
+  height: 30px;
+}
+.modal-gallery__close {
+  width: 20px;
+  background-color: var(--white);
+  border: none;
+  border-radius: 50%;
+}
+.modal-gallery__close:hover {
+  cursor: pointer;
+  content: url("/assets/img/svg/icon-eliminar-white.svg");
+  background-color: var(--dark-rose);
+}
+.modal-gallery__image-container {
+  background-image: url("/assets/img/fotos/cartera/Bolsos1.png");
+  height: 460px;
+  background-size: cover;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  position: relative;
+  background-position-y: -100px;
+}
+.modal-gallery-thumnails {
+  display: flex;
+  justify-content: space-around;
+  width: 450px;
+  margin: 0 auto;
+}
+.modal-gallery-thumnail {
+  width: 110px;
+  border-radius: 16px;
+}
+.modal-gallery-thumnail:hover {
+  cursor: pointer;
+  border: 2px solid hsl(26deg, 100%, 55%);
+}
+.modal-gallery__previus {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 190px;
+  left: -15px;
+}
+.modal-gallery__previus:hover {
+  cursor: pointer;
+}
+
+.modal-gallery__next {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 190px;
+  left: 520px;
+}
+.modal-gallery__next:hover {
+  cursor: pointer;
+}

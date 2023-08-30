@@ -1,0 +1,182 @@
+/* ICONOS DEL NAV */
+.nav-icons a {
+  font-size: 20px;
+}
+/* i.fa-solid.fa-bag-shopping {
+  font-size: 30px;
+} */
+.box {
+  padding-left: 70px;
+}
+.svg-inline--fa {
+  height: 1em;
+}
+.header__cart--notification {
+  /* display: none; */
+  background-color: var(--dark-rose);
+  width: 15px;
+  height: 12px;
+  border-radius: 16px;
+  position: absolute;
+  top: 47px;
+  right: 124px;
+  font-size: 0.6em;
+  text-align: center;
+  color: hsl(0deg, 0%, 100%);
+}
+.header__cart--notification-oculto {
+  background-color: var(--dark-rose);
+  width: 17px;
+  height: 14px;
+  border-radius: 16px;
+  position: absolute;
+  top: 13px;
+  right: 62px;
+  font-size: 0.6em;
+  text-align: center;
+  color: hsl(0deg, 0%, 100%);
+}
+
+/* ENCABEZADO REBAJAS */
+.rebajas {
+  background-color: #ce1f26;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1px;
+}
+
+.rebajas-ultimos {
+  text-align: center;
+  margin: 50px;
+}
+
+.rebajas-ultimos h1 {
+  font-size: 92px;
+}
+.rebajas-ultimos p {
+  font-size: 28px;
+}
+
+.rebajas-descuentos {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.descuentos-10 {
+  margin: 20px;
+  background-color: white;
+  color: #ce1f26;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  padding: 45px;
+}
+
+/* SECCION REBAJAS */
+.nov-semana {
+  text-align: center;
+  font-size: 35px;
+  padding: 40px;
+  text-decoration: underline var(--dark-rose);
+}
+
+/* CONTENEDOR IMAGENES REBAJAS: */
+.container-items {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/* PRIMER Y RESTO DE GRUPOS DE 4 PRODUCTOS */
+
+.item {
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+.item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.item:hover img {
+  transform: scale(1.2);
+}
+.item img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: all 0.5s;
+}
+.item figure {
+  overflow: hidden;
+}
+.info-product {
+  padding: 5px 10px;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--black);
+}
+.info-product h2 {
+  font-size: 15px;
+}
+.info-product button {
+  border: none;
+  background: none;
+  background-color: var(--rose);
+  color: var(--black);
+  padding: 7px 7px;
+  cursor: pointer;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-product button:hover {
+  background-color: var(--dark-rose);
+  color: var(--white);
+}
+.corazon {
+  display: flex;
+  cursor: pointer;
+  font-size: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+i.fa-solid.fa-cart-shopping {
+  padding-right: 10px;
+}
+
+/* PRECIOS */
+.details-prices {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  align-items: center;
+}
+.price {
+  font-weight: 700;
+  color: hsl(219deg, 9%, 45%);
+  text-decoration: line-through;
+}
+.price-rebaja {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ce1f26;
+}
+.percent-discount {
+  font-size: 0.7em;
+  background-color: hsl(25deg, 100%, 94%);
+  color: #ce1f26;
+  padding: 4px;
+  border: 4px;
+  font-weight: 700;
+}

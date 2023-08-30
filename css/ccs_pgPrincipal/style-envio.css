@@ -1,0 +1,35 @@
+/* SECTION ENVIOS */
+.imagen-envio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 50px;
+}
+
+.imagen-envio img {
+  transition: 1s linear;
+}
+
+.imagen-envio img:hover {
+  box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+}
+
+.envio {
+  text-align: center;
+  transform: translate(0%, -200%);
+}
+
+.separar-envio {
+  width: 10%;
+  margin-left: 170px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid;
+}
+
+.entre24 {
+  font-style: italic;
+}
+.entre24:hover {
+  text-decoration: underline;
+}

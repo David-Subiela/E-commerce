@@ -1,0 +1,155 @@
+.section-title {
+  margin-bottom: 30px;
+}
+
+.formularios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+.form-regses {
+  padding: 10px;
+  /* width: 55%; */
+  display: flex;
+  justify-content: center;
+}
+
+.account-page {
+  background-color: #fff;
+  min-height: 43.75rem;
+  max-width: 40.25rem;
+  /*  margin: 0 auto; */
+  box-shadow: 0 0 5px 5px #0000001a;
+  border-radius: 6px;
+  margin: 2.1rem;
+}
+
+.pass-explain {
+  color: rgb(148, 148, 148);
+  font-size: 13px;
+  padding-bottom: 35px;
+  padding-top: 7px;
+}
+.pass-remain {
+  color: var(--black);
+  font-size: 17px;
+  text-align: center;
+}
+
+.accept-register {
+  /* border: 1px solid rgb(148, 148, 148); */
+  padding: 20px 10px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  margin-bottom: 70px;
+  margin-top: 20px;
+}
+
+/* TOGGLE BUTTONS */
+.toggle-menu {
+  margin: 1rem;
+  border-radius: 30px;
+  padding: 5px;
+  background: #f6f6f6;
+  position: relative;
+}
+
+.toggle-menu #btn {
+  position: absolute;
+  top: 10%;
+  transform: translate(96%);
+  width: 50%;
+  height: 80%;
+  border-radius: 30px;
+  /* background: #ffffff; */
+  transition: 0.3s all ease;
+}
+
+.toggle-menu .toggle-btn-register,
+.toggle-btn-session {
+  border-radius: 30px;
+  padding: 0.825rem 5.5rem 0.625rem;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  /* width: 49%; */
+  font-size: 0.9rem;
+}
+
+/* CLASE PARA CAMBIAR EL COLOR DEL BACKGROUND DEL TOGGLE SWITCH */
+.toggle-btn-active {
+  background: #ffffff;
+  color: #000000;
+}
+/* .toggle-btn-transi {
+  transition: 3s all ease;
+} */
+
+/* INPUTS */
+input#email,
+input#name,
+input#password {
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
+    0 0 8px var(--light-rose);
+  outline: 0 none;
+  border-radius: 10px;
+}
+input#password {
+  margin: 0;
+}
+.email,
+.name,
+.password {
+  margin-bottom: 10px;
+}
+
+input#email:focus,
+input#name:focus,
+input#password:focus {
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
+    0 0 8px var(--dark-rose);
+  outline: 0 none;
+}
+
+/* ------------------- INICIAR SESIÓN  ------------------- */
+.ini-session {
+  display: none;
+  width: 75%;
+  padding-top: 40px;
+  animation: modal-newslet 0.3s 0.5s forwards;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* ------------------- RESTABLECER CONTRASEÑA  ------------------- */
+.ini-session-contra {
+  display: none;
+  width: 75%;
+  padding-top: 40px;
+  max-width: 33.25rem;
+  animation: modal-newslet 0.3s 0.5s forwards;
+  visibility: hidden;
+  opacity: 0;
+}
+.ini-session-contra p {
+  padding-bottom: 30px;
+  font-weight: 700;
+}
+
+/* ------------------- REGISTRO  ------------------- */
+.ini-register {
+  /* display: none; */
+  width: 75%;
+}
+
+@keyframes modal-newslet {
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/ccs_pgPrincipal/style.css" />
+    <link rel="stylesheet" href="/css/css_products/style-products.css">
+    <link rel="stylesheet" href="/css/css_products/style-products-modal.css">
+    <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-buttonToltip.css" />
+    <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-footer.css" />
+    <!-- <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-cart.css" /> -->
+    <link rel="icon" href="/assets/img/Logos/favicon2.png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Kamile EC - Ropa, Zapatos y Complementos</title>
+</head>
+
+<body>
+    <div class="flecha-arriba-products">
+        <img src="/assets/img/Logos/flecha.png" alt="flecha" />
+    </div>
+    <!-------------------------------- ENCABEZADO -------------------------------------->
+    <header>
+        <div class="suscribete">
+            <ul class="slide-text">Gastos de envío gratis a partir de 65$</ul>
+            <ul class="slide-text">Inicia sesión como socio/a y disfruta de las ventajas</ul>
+            <ul class="slide-text">Consigue un 10% de decuento extra. Suscríbete a la newsletter</ul>
+        </div>
+        <nav class="encabezado-completo" id="encabezado-completo">
+            <div class="encabezado">
+                <div class="nombre-tienda">
+                    <img class="kamile-logo" src="/assets/img/Logos/logo_Kamile_sinfondo.png" alt="Logo Kamile" />
+                </div>
+                <div class="menu-encab">
+                    <ul class="menu-encab">
+                        <li>
+                            <a href="/html/html_pgPrincipal/index.html#novedades">Novedades</a>
+                        </li>
+                        <li>
+                            <a href="#">Ropa</a>
+                        </li>
+                        <!--  <li>
+                            <a href="#">Zapatos</a>
+                        </li> -->
+                        <li>
+                            <a href="/html/html_complementos/index-complementos.html">Accesorios</a>
+                        </li>
+                        <li>
+                            <a class="rebajas" href="/html/html_rebajas/index-rebajas.html">Rebajas</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-icons">
+                    <div class="box">
+                        <input type="text" name="search" placeholder="Busca aquí tu producto" class="src"
+                            id="autocomplete-input" autocomplete="off" />
+                        <a href="#" title="Lista de deseos">
+                            <i class="fa-regular fa-heart fa-lg" alt="Lista de deseos"></i>
+                        </a>
+                        <div class="header__cart--notification">0</div>
+                        <a href="#" title="Carro compra">
+                            <i class="fa-solid fa-bag-shopping" alt="Carro Compra" class="principal-cartChart"></i>
+                        </a>
+                        <a href="#" title="Mi cuenta">
+                            <i class="fa-solid fa-circle-user" alt="Login"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-------------------------------- CARRO COMPRA SCROLL -------------------------------------->
+                <div class="carro-compra-oculto">
+                    <div class="header__cart--notification-oculto">0</div>
+                    <a href="#" title="Carro compra" class="principal-cartChart-oculto">
+                        <i class="fa-solid fa-bag-shopping" alt="Carro Compra"></i>
+                    </a>
+                </div>
+                <!-------------------------------- FIN CARRO COMPRA SCROLL -------------------------------------->
+                <div class="nav-icon-button" id="icon-button-appear">
+                    <button class="button-tooltip">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </button>
+                    <p class="button-tooltip-menu">Menú</p>
+                    <span class="tooltip-menu">Hola,<br />
+                        ¿Ya eres de Kamile?
+                        <button class="btn-light-menu">Identificarme</button>
+                        <span class="menu-registrate">
+                            ¿No tienes cuenta? <a class="register" href="#">Regístrate</a>
+                            <div class="menu-aparece">
+                                <hr class="oculto" />
+                                <ul class="menu-encab-oculto">
+                                    <li>
+                                        <a href="#novedades">Novedades</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ropa</a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href="#">Zapatos</a>
+                                    </li> -->
+                                    <li>
+                                        <a href="#">Complementos</a>
+                                    </li>
+                                    <li>
+                                        <a class="rebajas" href="#">Rebajas</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </nav>
+        <hr class="fin-encab" />
+    </header>
+    <!-------------------------------- FIN ENCABEZADO -------------------------------------->
+
+    <!-------------------------------- VENTANA MODAL CARRITO COMPRA -------------------------------------->
+    <div id="modal-cart" class="modal-cart">
+        <div class="modal-cart-content">
+            <div class="modal-cart-header">
+                <button class="modal-cart-close">&times;</button>
+                <h2 id="cart-count">Productos añadidos al carrito (0)</h2>
+            </div>
+            <hr class="separa-encab-cart" />
+            <div id="modal-cart-empty-message" style="display: none;">
+                <img class="cesta-vacia-img" src="/assets/img/carrito/carro-vacio.png" alt="Cesta vacía">
+                <p class="cesta-vacia-text">Tu cesta está vacía.</p>
+            </div>
+            <div id="modal-cart-product-list"></div>
+            <!-- <hr class="separa-encab-cart" /> -->
+            <form action="#" method="POST" class="modal-cart-form">
+                <div class="modal-cart-promo">
+                    <input type="text" name="modal-cart-promo" id="modal-cart-promo" placeholder="Código promocional" />
+                </div>
+                <div class="modal-cart-promo-add">
+                    <input type="submit" value="AÑADIR" />
+                </div>
+            </form>
+            <hr class="separa-encab-cart" />
+            <div class="modal-cart-price">
+                <p id="total-price">Total: $0,00</p>
+            </div>
+            <div class="modal-cart-final">
+                <input type="submit" value="FINALIZAR COMPRA" />
+            </div>
+        </div>
+    </div>
+    <!-------------------------------- FIN VENTANA MODAL CARRITO COMPRA -------------------------------------->
+
+    <!-------------------------------- SECCIÓN PRODUCTO (IMÁGENES) -------------------------------------->
+
+    <section class="content">
+        <article class="gallery">
+            <div class="gallery__image-container">
+                <img class="gallery__previus" src="/assets/img/svg/icon-previous.svg" alt="previus">
+                <img class="gallery__next" src="/assets/img/svg/icon-next.svg" alt="next">
+            </div>
+            <div class="gallery-thumnails">
+                <img id="1" class="gallery-thumnail" src="/assets/img/fotos/cartera/Bolsos1.png" alt="Bolso completo">
+                <img id="2" class="gallery-thumnail" src="/assets/img/fotos/cartera/Bolsos2.png" alt="Bolso derecha">
+                <img id="3" class="gallery-thumnail" src="/assets/img/fotos/cartera/Bolsos3.png" alt="Bolso izquierda">
+            </div>
+        </article>
+        <!-------------------------------- FIN SECCIÓN PRODUCTO (IMÁGENES) -------------------------------------->
+
+        <!-------------------------------- SECCIÓN PRODUCTO (DETALLES) -------------------------------------->
+        <article class="details">
+            <h2 class="details__company">Kamile EC</h2>
+            <h2 class="details__title">Bolso de Cuero negro</h2>
+            <div class="details-assess">
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <p class="details-stars">(0)</p>
+            </div>
+            <div class="details__prices">
+                <p class="price">$35.00 </p>
+            </div>
+            <div class="details__product-quantity">
+                <div class="input-count">
+                    <img class="input__minus" src="/assets/img/svg/icon-minus.png" alt="minus">
+                    <input class="input__number" type="text" value="0">
+                    <img class="input__plus" src="/assets/img/svg/icon-plus.png" alt="plus">
+                </div>
+                <button class="add-cart"> <img src="/assets/img/svg/icon-cart-white.svg" alt=""> Añadir al
+                    carrito</button>
+            </div>
+            <p class="details__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quo atque
+                dolorem porro velit similique reprehenderit illum doloribus nihil, dolorum modi aliquam! Autem
+                perferendis distinctio eveniet. Ad, odit? Dolores, ea!
+            </p>
+            <p class="details-ref">Ref. 0215399</p>
+            <hr class="separa-encab-product">
+            <div class="composition-items-compo">
+                <i class="fa-solid fa-clipboard-list" style="color: #fbdbbf;"></i>
+                <p class="composition-items-titleCompo">Composición y cuidados</p>
+                <img id="composition-items-compo" class="gallery-previus" src="/assets/img/svg/icon-next.svg"
+                    alt="previus">
+            </div>
+            <!-------------------------------- FIN SECCIÓN PRODUCTO (DETALLES) -------------------------------------->
+
+            <!-------------------------------- MODAL COMPOSICION Y CUIDADOS -------------------------------------->
+            <div id="ventana-modal" class="modal">
+                <div class="contenido-modal">
+                    <span class="close">&times;</span>
+                    <div class="contenedor-modal">
+                        <div class="composition-list">
+                            <h1 class="cancelar-suscri-bis">Composición y cuidados</h1>
+                            <hr>
+                            <p class="cancelar-suscri-parraf">
+                                Composición
+                            <ul>
+                                <li class="cancelar-suscri-list">100% algodón</li>
+                            </ul>
+                            </p>
+                            <hr>
+                            <p class="cancelar-suscri-parraf">
+                                Cuidados
+                            <ul class="composition-imgs">
+                                <li><img src="/assets/img/composition/temperatura-maxima-agitacion-media.png"
+                                        alt="">Temperatura máxima de
+                                    lavado 30ºC</li>
+                                <li><img src="/assets/img/composition/sin-blanqueamiento.png" alt="">No blanquear</li>
+                                <li><img src="/assets/img/composition/no-secar-en-secadora.png" alt="">No secar en
+                                    secadora
+                                </li>
+                                <li><img src="/assets/img/composition/plancha.png" alt="">Planchado suave</li>
+                                <li><img src="/assets/img/composition/lavado-en-seco.png" alt="">No lavar en seco</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------- FINAL MODAL COMPOSICION Y CUIDADOS -------------------------------------->
+
+            <!-------------------------------- MODAL ENVIOS -------------------------------------->
+            <hr class="separa-encab-product">
+            <div class="composition-items-envi">
+                <i class="fa-solid fa-truck-fast" style="color: #fbdbbf;"></i>
+                <p class="composition-items-titleEnvi">Envío</p> <img id="composition-items-envi"
+                    class="gallery-previus" src="/assets/img/svg/icon-next.svg" alt="previus">
+            </div>
+            <div id="ventana-modal-envi" class="modal">
+                <div class="contenido-modal">
+                    <span class="close-envi">&times;</span>
+                    <div class="contenedor-modal">
+                        <h1 class="cancelar-suscri-bis">Envío</h1>
+                        <hr>
+                        <p class="cancelar-suscri-parraf">
+                        <ul class="envio-list">
+                            <li class="envio-list-one">
+                                <img src="/assets/img/composition/caja.png" alt=""><u>Envío Standard</u><br>
+                                3 - 5 días.<br>
+                                <strong>3.95$</strong> <br>
+                                GRATIS en pedidos superiores a 65$
+                            </li>
+                            <li class="envio-list-two">
+                                <img src="/assets/img/composition/envio-express.png" alt=""><u>Express delivery</u><br>
+                                1 - 2 días.<br>
+                                <strong>5.30$</strong><br>
+                                GRATIS en pedidos superiores a 125$
+                            </li>
+                        </ul>
+                        <hr>
+                        <p class="aviso-pie">El cliente deberá abonar los gastos de aduana correspondientes, los cuales
+                            variarán en función del peso del envío.</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------- FINAL MODAL ENVIOS -------------------------------------->
+
+            <!-------------------------------- MODAL DEVOLUCIONES -------------------------------------->
+            <hr class="separa-encab-product">
+            <div class="composition-items-devol">
+                <i class="fa-solid fa-arrow-rotate-right" style="color: #fbdbbf;"></i>
+                <p class="composition-items-titleDevo">Devoluciones</p> <img id="composition-items-devol"
+                    class="gallery-previus" src="/assets/img/svg/icon-next.svg" alt="previus">
+            </div>
+            <div id="ventana-modal-devol" class="modal">
+                <div class="contenido-modal">
+                    <span class="close-devol">&times;</span>
+                    <div class="contenedor-modal">
+                        <h1 class="cancelar-suscri-bis">Devoluciones</h1>
+                        <hr>
+                        <p class="devol-parraf"> Dispones de <strong>un mes</strong> para realizar tu
+                            devolución a través de
+                            cualquiera de los siguientes métodos:
+                        <ul class="devol-list">
+                            <li>Devolución en centro especializado <span
+                                    class="free-gratis-one"><strong>Gratis</strong></span></li>
+                            <li>Recogida en tu domicilio <span class="free-gratis-two"><strong>Gratis</strong></span>
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr class="separa-encab-product">
+            <!-------------------------------- FINAL MODAL DEVOLUCIONES -------------------------------------->
+            <div class="social-networks">
+                <a href="https://es-es.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i>
+                </a>
+                <a href="https://www.instagram.com/kamile.ec/?hl=es" target="_blank">
+                    <i class="fa-brands fa-instagram fa-2x"></i>
+                </a>
+                <a href="https://www.google.com/intl/es/gmail/about/" target="_blank" class="icon-email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </article>
+    </section>
+
+    <!-------------------------------- FIN SECCIÓN PRODUCTO (DETALLES) -------------------------------------->
+
+    <!-------------------------------- FOOTER -------------------------------------->
+
+    <footer>
+        <div class="seccion-destino-footer">
+            <div class="footer-clic">
+                <div class="siguenos">
+                    <h5>Síguenos</h5>
+                    <a href="https://es-es.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kamile.ec/?hl=es" target="_blank">
+                        <i class="fa-brands fa-instagram fa-2x"></i>
+                    </a>
+                    <div class="nombre-tienda">
+                        <img class="kamile-logo-foot" src="/assets/img/Logos/logo_Kamile_sinfondo.png"
+                            alt="Logo Kamile" />
+                    </div>
+                </div>
+                <div class="location-clic">
+                    <h5>Contacto</h5>
+                    <a href="https://www.google.com/intl/es/gmail/about/" target="_blank">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>kamile.ec@gmail.es</span>
+                    </a>
+                </div>
+                <div class="location-clic">
+                    <h5>Metodos de pago</h5>
+                    <div class="metodos-pago">
+                        <a href="#">
+                            <i class="fa-brands fa-cc-visa"></i><span class="pay-icon">Visa</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-cc-mastercard"></i><span class="pay-icon">Master Card</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-paypal"></i><span class="paypal-icon">PayPal</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-gift"></i><span class="pay-icon">Tarjeta regalo</span>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-container">
+                <div class="footer_bottom">
+                    <hr class="separa-encab" />
+                    <div class="condiciones-politicas">
+                        <a href="#" title="Condiciones de uso" target="_blank"><strong>CONDICIONES DE
+                                USO</strong></a>
+                        |
+                        <a href="/assets/politicaPrivacidad/PoliticaPrivacidad.pdf" title="Política de privacidad"
+                            target="_blank">Política de privacidad</a>
+                        |
+                        <a href="/assets/politicaPrivacidad/PoliticaCookies.pdf" title="Politica de cookies"
+                            target="_blank"><b>POLÍTICA DE COOKIES</b></a>
+                        |
+                        <a href="#" title="Condiciones de Compra" target="_blank">Términos y condiciones de
+                            compra</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    Made with <i class="fa fa-heart"></i> by
+                    <a href="https://github.com/David-Subiela" target="_blank">David</a>
+                    <i class="fa-regular fa-copyright"></i> 2023
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-------------------------------- INICIO GALLERY MODAL-------------------------------------->
+    <div class="modal-gallery__background">
+        <article class="modal-gallery">
+            <div class="modal-gallery__close-container">
+                <img class="modal-gallery__close" src="/assets/img/svg/icon-eliminar.svg" alt="icon close">
+            </div>
+            <div class="modal-gallery__image-container">
+                <img class="modal-gallery__previus" src="/assets/img/svg/icon-previous.svg" alt="previus">
+                <img class="modal-gallery__next" src="/assets/img/svg/icon-next.svg" alt="next">
+            </div>
+            <div class="modal-gallery-thumnails">
+                <img id="m1" class="modal-gallery-thumnail" src="/assets/img/fotos/cartera/Bolsos1.png" alt="thumnail">
+                <img id="m2" class="modal-gallery-thumnail" src="/assets/img/fotos/cartera/Bolsos2.png" alt="thumnail">
+                <img id="m3" class="modal-gallery-thumnail" src="/assets/img/fotos/cartera/Bolsos3.png" alt="thumnail">
+            </div>
+        </article>
+    </div>
+    <!-------------------------------- FIN GALLERY MODAL-------------------------------------->
+
+
+
+    <script src="/js/js_productos/script-products.js"></script>
+    <script src="/js/js_productos/script-products-modals.js"></script>
+    <script src="/js/js_pgPrincipal/script-persistHeader.js"></script>
+    <script src="/js/js_pgPrincipal/script-persistHeader.js"></script>
+    <script src="/js/js_productos/script-product-cart.js"></script>
+    <!-- <script src="/js/js_pgPrincipal/script-shopCart.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/ccs_pgPrincipal/style.css" />
+  <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-whatsYflecha.css" />
+  <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-novedades.css" />
+  <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-footer.css" />
+  <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-envio.css" />
+  <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-suscribe.css" />
+  <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-testimonial.css" />
+  <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-buttonToltip.css" />
+  <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-cookies.css" />
+  <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-loader.css" />
+  <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-form.css">
+  <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-cart.css">
+  <link rel="icon" href="/assets/img/Logos/favicon2.png" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Kamile EC - Ropa, Zapatos y Complementos</title>
+</head>
+
+<body>
+  <!-------------------------------- LOADER -------------------------------------->
+  <div class="wrapper loader" id="loader">
+    <div class="loading"></div>
+  </div>
+  <!-------------------------------- FIN LOADER -------------------------------------->
+  <div class="flecha-arriba">
+    <img src="/assets/img/Logos/flecha.png" alt="flecha" />
+  </div>
+  <div class="btn-whatsApp">
+    <a href="https://api.whatsapp.com/send?phone=+" class="btn-whatsApp" id="tooltip" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i><span class="tooltip-box">Contáctanos para conocer MÁS SOBRE NUESTROS
+        PRODUCTOS</span>
+    </a>
+  </div>
+  <!-------------------------------- MODAL CARGAR PÁGINA -------------------------------------->
+  <input type="checkbox" id="cerrar">
+  <label for="cerrar" id="btn-cerrar">X</label>
+  <div class="modal-newslet">
+    <div class="contenido">
+      <h2>Consigue un <span class="modal-discount">-10%</span> en tu próximo pedido</h2>
+      <h4>Apúntate a la newsletter y también te avisaremos de nuestras ofertas</h4>
+      <div class="email-newslet">
+        <input type="email" name="email" id="email-newslet" placeholder="Email*" title="Campo obligatorio" required />
+      </div>
+      <div class="accept-newslet">
+        <input type="submit" value="Me apunto" />
+      </div>
+    </div>
+  </div>
+  <!-------------------------------- FIN MODAL CARGAR PÁGINA -------------------------------------->
+
+  <!-------------------------------- ENCABEZADO -------------------------------------->
+  <header>
+    <div class="suscribete">
+      <ul class="slide-text">Gastos de envío gratis a partir de 65$</ul>
+      <ul class="slide-text">Inicia sesión como socio/a y disfruta de las ventajas</ul>
+      <ul class="slide-text">Consigue un 10% de decuento extra. Suscríbete a la newsletter</ul>
+    </div>
+    <nav class="encabezado-completo" id="encabezado-completo">
+      <div class="encabezado">
+        <div class="nombre-tienda">
+          <img class="kamile-logo" src="/assets/img/Logos/logo_Kamile_sinfondo.png" alt="Logo Kamile" />
+        </div>
+        <div class="menu-encab">
+          <ul class="menu-encab">
+            <li>
+              <a href="#novedades">Novedades</a>
+            </li>
+            <li>
+              <a href="/html/html_ropa/index-ropa.html">Ropa</a>
+            </li>
+            <!-- <li>
+              <a href="#">Zapatos</a>
+            </li> -->
+            <li>
+              <a href="/html/html_complementos/index-complementos.html">Accesorios</a>
+            </li>
+            <li>
+              <a class="rebajas" href="/html/html_rebajas/index-rebajas.html">Rebajas</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-icons">
+          <div class="box">
+            <input type="text" name="search" placeholder="Busca aquí tu producto" class="src" id="autocomplete-input"
+              autocomplete="off" />
+            <a href="#" title="Lista de deseos">
+              <i class="fa-regular fa-heart fa-lg" alt="Lista de deseos"></i>
+            </a>
+            <div class="header__cart--notification">0</div>
+            <a href="#" title="Carro compra" class="principal-cartChart">
+              <i class="fa-solid fa-bag-shopping" alt="Carro Compra"></i>
+            </a>
+            <a href="/html/html_pgPrincipal/index-loginPass.html" title="Mi cuenta">
+              <i class="fa-solid fa-circle-user" alt="Login"></i>
+            </a>
+          </div>
+        </div>
+        <!-------------------------------- CARRO COMPRA SCROLL -------------------------------------->
+        <div class="carro-compra-oculto">
+          <div class="header__cart--notification-oculto">0</div>
+          <a href="#" title="Carro compra" class="principal-cartChart-oculto">
+            <i class="fa-solid fa-bag-shopping" alt="Carro Compra"></i>
+          </a>
+        </div>
+        <!-------------------------------- FIN CARRO COMPRA SCROLL -------------------------------------->
+
+        <!-------------------------------- MENÚ OCULTO SCROLL -------------------------------------->
+        <div class="nav-icon-button" id="icon-button-appear">
+          <button class="button-tooltip">
+            <div></div>
+            <div></div>
+            <div></div>
+          </button>
+          <p class="button-tooltip-menu">Menú</p>
+          <span class="tooltip-menu">Hola,<br />
+            ¿Ya eres de Kamile?
+            <button class="btn-light-menu">Identificarme</button>
+            <span class="menu-registrate">
+              ¿No tienes cuenta? <a class="register" href="/html/html_pgPrincipal/index-loginPass.html">Regístrate</a>
+              <div class="menu-aparece">
+                <hr class="oculto" />
+                <ul class="menu-encab-oculto">
+                  <li>
+                    <a href="#novedades">Novedades</a>
+                  </li>
+                  <li>
+                    <a href="/html/html_ropa/index-ropa.html">Ropa</a>
+                  </li>
+                  <!-- <li>
+                    <a href="#">Zapatos</a>
+                  </li> -->
+                  <li>
+                    <a href="/html/html_complementos/index-complementos.html">Accesorios</a>
+                  </li>
+                  <li>
+                    <a class="rebajas" href="/html/html_rebajas/index-rebajas.html">Rebajas</a>
+                  </li>
+                </ul>
+              </div>
+            </span>
+          </span>
+        </div>
+        <!-------------------------------- FIN MENÚ OCULTO SCROLL -------------------------------------->
+      </div>
+    </nav>
+
+    <hr class="fin-encab" />
+  </header>
+  <!-------------------------------- FIN ENCABEZADO -------------------------------------->
+
+  <!-------------------------------- NOVEDADES PRODUCTOS -------------------------------------->
+  <article class="juntas">
+    <div class="imagen-detras">
+      <h1 class="secreto">
+        El secreto de un gran estilo <br />
+        es sentirte bien con lo que usas
+      </h1>
+      <div id="carrusel-contenido">
+        <div id="carrusel-caja">
+          <div class="carrusel-elemento">
+            <img class="imagenes" src="/assets/img/slider/Imagen1.jpg" alt="Error de carga">
+          </div>
+          <div class="carrusel-elemento">
+            <img class="imagenes" src="/assets/img/slider/Imagen2.jpg" alt="Error de carga">
+          </div>
+          <div class="carrusel-elemento">
+            <img class="imagenes" src="/assets/img/slider/Imagen4.jpg" alt="Error de carga">
+          </div>
+        </div>
+        <div id="novedades"></div>
+      </div>
+  </article>
+  <section>
+    <div>
+      <h2 class="nov-semana">Novedades</h2>
+    </div>
+    <div class="container-items">
+
+      <!-------------------------------- VENTANA MODAL CARRITO COMPRA -------------------------------------->
+      <div id="modal-cart" class="modal-cart">
+        <div class="modal-cart-content">
+          <div class="modal-cart-header">
+            <button class="modal-cart-close">&times;</button>
+            <h2 id="cart-count">Productos añadidos al carrito (0)</h2>
+          </div>
+          <hr class="separa-encab-cart" />
+          <div id="modal-cart-empty-message" style="display: none;">
+            <img class="cesta-vacia-img" src="/assets/img/carrito/carro-vacio.png" alt="Cesta vacía">
+            <p class="cesta-vacia-text">Tu cesta está vacía.</p>
+          </div>
+          <div id="modal-cart-product-list"></div>
+          <!-- <hr class="separa-encab-cart" /> -->
+          <form action="#" method="POST" class="modal-cart-form">
+            <div class="modal-cart-promo">
+              <input type="text" name="modal-cart-promo" id="modal-cart-promo" placeholder="Código promocional" />
+            </div>
+            <div class="modal-cart-promo-add">
+              <input type="submit" value="AÑADIR" />
+            </div>
+          </form>
+          <hr class="separa-encab-cart" />
+          <div class="modal-cart-price">
+            <p id="total-price">Total: $0,00</p>
+          </div>
+          <div class="modal-cart-final">
+            <input type="submit" value="FINALIZAR COMPRA" />
+          </div>
+        </div>
+      </div>
+      <!-------------------------------- FIN VENTANA MODAL CARRITO COMPRA -------------------------------------->
+
+
+      <!-- <div id="modal-cart-product-list" style="display: block;">
+        <div class="product-info">
+          <div class="product-img-title">
+            <img src="http://127.0.0.1:5500/assets/img/fotos/AnillosCuarzo.png" alt="Imagen del producto">
+            <h3 class="product-info-name">Anillos de Cuarzo</h3>
+          </div>
+          <div class="product-info-details">
+            <img class="input__minus" src="/assets/img/svg/icon-minus.png" alt="minus">
+            <input class="input__number" type="text">
+            <img class="input__plus" src="/assets/img/svg/icon-plus.png" alt="plus">
+          </div>
+          <div class="product-info-details-price">
+            <p class="product-info-price">Precio: $5.00/ud</p>
+          </div>
+          <img class="recicle-bin-img" src="/assets/img/carrito/recicle-bin.png" alt="Eliminar producto">
+        </div>
+      </div> -->
+
+      <!--       <div class="product-info">
+        <div class="product-img-title">
+          <img src="/AnillosCuarzo.png" alt="Imagen del producto">          
+        </div>
+        <div class="product-info-details">
+          <h3 class="product-info-name">Anillos de Cuarzo</h3>
+          <img class="input__minus" src="icon-minus.png" alt="minus">
+          <input class="input__number" type="text">
+          <img class="input__plus" src="icon-plus.png" alt="plus">
+        </div>
+        <div class="product-info-details-price">
+          <img class="recicle-bin-img" src="recicle-bin.png" alt="Eliminar producto">
+          <p class="product-info-price">Precio: $5.00/ud</p>
+        </div>        
+      </div> -->
+
+
+
+
+
+
+      <!-------------------------------- PRIMER GRUPO DE PRODUCTOS (NOVEDADES) -------------------------------------->
+
+      <div class="item" data-aos="fade-up" data-aos-duration="2000">
+        <figure>
+          <img src="/assets/img/fotos/AnillosCuarzo.png" alt="Error de carga">
+        </figure>
+        <div class="info-product">
+          <h2>Anillos de Cuarzo</h2>
+          <p class="price"><span id="productPrice">$5.00/ud</span></p>
+          <div class="corazon">
+            <button class="add-cart"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+              Añadir al carrito
+            </button>
+            <div class="change" id="element1">
+              <i class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item" data-aos="fade-up" data-aos-duration="2000">
+        <a href="/html/html_productos/index-products.html">
+          <figure>
+            <img src="/assets/img/fotos/cartera/Bolsos2.png" alt="Error de carga">
+          </figure>
+        </a>
+        <div class="info-product">
+          <h2>Bolso Cuero Negro</h2>
+          <p class="price">$35.00</p>
+          <div class="corazon">
+            <button class="add-cart"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>Añadir al
+              carrito</button>
+            <div class="change" id="element2">
+              <i class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item" data-aos="fade-up" data-aos-duration="2000">
+        <figure>
+          <img src="/assets/img/fotos/Conjunto.png" alt="Error de carga">
+        </figure>
+        <div class="info-product">
+          <h2>Conjunto</h2>
+          <p class="price">$85.00/ud</p>
+          <div class="corazon">
+            <button class="add-cart"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>Añadir al
+              carrito</button>
+            <div class="change" id="element3">
+              <i class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item" data-aos="fade-up" data-aos-duration="2000">
+        <figure>
+          <img src="/assets/img/fotos/Renos.png" alt="Error de carga">
+        </figure>
+        <div class="info-product">
+          <h2>Pendientes Reno</h2>
+          <p class="price">$5.00/pareja</p>
+          <div class="corazon">
+            <button><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>Añadir al carrito</button>
+            <div class="change" id="element4">
+              <i class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-------------------------------- FIN PRIMER GRUPO DE PRODUCTOS (NOVEDADES) -------------------------------------->
+
+      <!-------------------------------- SEGUNDO GRUPO DE PRODUCTOS (NOVEDADES) -------------------------------------->
+      <div class="item dissapear" data-aos="fade-up" data-aos-duration="2000">
+        <figure>
+          <img src="/assets/img/fotos/Conjunto.png" alt="Error de carga">
+        </figure>
+        <div class="info-product">
+          <h2>Conjunto</h2>
+          <p class="price">$85.00/ud</p>
+          <div class="corazon">
+            <button><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>Añadir al carrito</button>
+            <div class="change" id="element3">
+              <i class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item dissapear" data-aos="fade-up" data-aos-duration="2000">
+        <figure>
+          <img src="/assets/img/fotos/Conjunto.png" alt="Error de carga">
+        </figure>
+        <div class="info-product">
+          <h2>Conjunto</h2>
+          <p class="price">$85.00/ud</p>
+          <div class="corazon">
+            <button><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>Añadir al carrito</button>
+            <div class="change" id="element3">
+              <i class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item dissapear" data-aos="fade-up" data-aos-duration="2000">
+        <figure>
+          <img src="/assets/img/fotos/Conjunto.png" alt="Error de carga">
+        </figure>
+        <div class="info-product">
+          <h2>Conjunto</h2>
+          <p class="price">$85.00/ud</p>
+          <div class="corazon">
+            <button><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>Añadir al carrito</button>
+            <div class="change" id="element3">
+              <i class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item dissapear" data-aos="fade-up" data-aos-duration="2000">
+        <figure>
+          <img src="/assets/img/fotos/Conjunto.png" alt="Error de carga">
+        </figure>
+        <div class="info-product">
+          <h2>Conjunto</h2>
+          <p class="price">$85.00/ud</p>
+          <div class="corazon">
+            <button><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>Añadir al carrito</button>
+            <div class="change" id="element3">
+              <i class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-------------------------------- FIN SEGUNDO GRUPO DE PRODUCTOS (NOVEDADES) -------------------------------------->
+
+      <!-------------------------------- TERCER GRUPO DE PRODUCTOS (NOVEDADES) -------------------------------------->
+      <div class="item dissapear" data-aos="fade-up" data-aos-duration="2000">
+        <figure>
+          <img src="/assets/img/fotos/AnillosCuarzo.png" alt="Error de carga">
+        </figure>
+        <div class="info-product">
+          <h2>Anillos de Cuarzo</h2>
+          <p class="price">$5.00/ud</p>
+          <div class="corazon">
+            <button><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+              Añadir al carrito
+            </button>
+            <div class="change" id="element1">
+              <i class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item dissapear" data-aos="fade-up" data-aos-duration="2000">
+        <figure>
+          <img src="/assets/img/fotos/AnillosCuarzo.png" alt="Error de carga">
+        </figure>
+        <div class="info-product">
+          <h2>Anillos de Cuarzo</h2>
+          <p class="price">$5.00/ud</p>
+          <div class="corazon">
+            <button><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+              Añadir al carrito
+            </button>
+            <div class="change" id="element1">
+              <i class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item dissapear" data-aos="fade-up" data-aos-duration="2000">
+        <figure>
+          <img src="/assets/img/fotos/AnillosCuarzo.png" alt="Error de carga">
+        </figure>
+        <div class="info-product">
+          <h2>Anillos de Cuarzo</h2>
+          <p class="price">$5.00/ud</p>
+          <div class="corazon">
+            <button><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+              Añadir al carrito
+            </button>
+            <div class="change" id="element1">
+              <i class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item dissapear" data-aos="fade-up" data-aos-duration="2000">
+        <figure>
+          <img src="/assets/img/fotos/AnillosCuarzo.png" alt="Error de carga">
+        </figure>
+        <div class="info-product">
+          <h2>Anillos de Cuarzo</h2>
+          <p class="price">$5.00/ud</p>
+          <div class="corazon">
+            <button><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+              Añadir al carrito
+            </button>
+            <div class="change" id="element1">
+              <i class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-------------------------------- FIN TERCER GRUPO DE PRODUCTOS (NOVEDADES) -------------------------------------->
+
+      <!-------------------------------- CUARTO GRUPO DE PRODUCTOS (NOVEDADES) -------------------------------------->
+      <div class="item dissapear" data-aos="fade-up" data-aos-duration="2000">
+        <figure>
+          <img src="/assets/img/fotos/AnillosCuarzo.png" alt="Error de carga">
+        </figure>
+        <div class="info-product">
+          <h2>Anillos de Cuarzo</h2>
+          <p class="price">$5.00/ud</p>
+          <div class="corazon">
+            <button><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+              Añadir al carrito
+            </button>
+            <div class="change" id="element1">
+              <i class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-------------------------------- FIN CUARTO GRUPO DE PRODUCTOS (NOVEDADES) -------------------------------------->
+    </div>
+    <button class="btn-light">Ver más</button>
+  </section>
+  <hr class="separa-encab" />
+  <!-------------------------------- FIN NOVEDADES PRODUCTOS -------------------------------------->
+
+  <!-------------------------------- SECCION ENVIOS -------------------------------------->
+  <section class="imagen-envio">
+    <div class="titulo" data-aos="flip-right">
+      <a href="#">
+        <img src="/assets/img/Envios/box-service-1.png" alt="Entrega Pedidos" />
+      </a>
+      <div class="envio">
+        <h3>Envíos a nivel nacional</h3>
+        <hr class="separar-envio" />
+        <a href="#">
+          <span class="entre24">Compras a partir de 35$</span>
+        </a>
+      </div>
+    </div>
+    <div class="titulo" data-aos="flip-right">
+      <a href="#">
+        <img src="/assets/img/Envios/box-service-2.png" alt="Tiempo de envío" />
+      </a>
+      <div class="envio">
+        <h3>Tiempo de entrega</h3>
+        <hr class="separar-envio" />
+        <a href="#">
+          <span class="entre24">Entre 24 y 48 horas</span>
+        </a>
+      </div>
+    </div>
+    <div class="titulo" data-aos="flip-right">
+      <a href="#">
+        <img src="/assets/img/Envios/box-service-3.png" alt="Garantía de calidad" />
+      </a>
+      <div class="envio">
+        <h3>Garantía de calidad</h3>
+        <hr class="separar-envio" />
+        <a href="#">
+          <span class="entre24">Empaquetado cuidadosamente</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <hr class="separa-encab" />
+  <!-------------------------------- FIN SECCION ENVIOS -------------------------------------->
+
+  <!-------------------------------- OPINIONES -------------------------------------->
+  <h1 class="testimonial-opinion" data-aos="fade-up" data-aos-duration="2000">Opiniones de nuestros clientes</h1>
+
+
+  <div class="slide" data-aos="zoom-in">
+    <div class="slide-inner">
+
+      <input class="slide-open" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden="" checked="checked">
+      <div class="slide-item">
+        <div class="inicial-area">
+          <p class="inicial-area-parag">L</p>
+          <h6 class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </h6>
+        </div>
+        <h5>Lilian L.</h5>
+        <p class="content">
+          Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+          ever since. Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+          ever since.
+        </p>
+      </div>
+      <input class="slide-open" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="">
+      <div class="slide-item">
+        <div class="inicial-area">
+          <p class="inicial-area-parag">H</p>
+          <h6 class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </h6>
+        </div>
+        <h5>Hilda A.</h5>
+        <p class="content">
+          Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+          ever since.
+        </p>
+
+      </div>
+
+      <input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
+      <div class="slide-item">
+        <div class="inicial-area">
+          <p class="inicial-area-parag">D</p>
+          <h6 class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </h6>
+        </div>
+        <h5>Domenika D.</h5>
+        <p class="content">
+          Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+          ever since. Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+          ever since. Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+          ever since.
+        </p>
+
+      </div>
+
+      <input class="slide-open" type="radio" id="slide-4" name="slide" aria-hidden="true" hidden="">
+      <div class="slide-item">
+        <div class="inicial-area">
+          <p class="inicial-area-parag">N</p>
+          <h6 class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </h6>
+        </div>
+        <h5>Norma A.</h5>
+        <p class="content">
+          Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+          ever since. Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+          ever since.
+        </p>
+
+      </div>
+
+      <input class="slide-open" type="radio" id="slide-5" name="slide" aria-hidden="true" hidden="">
+      <div class="slide-item">
+        <div class="inicial-area">
+          <p class="inicial-area-parag">M</p>
+          <h6 class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </h6>
+        </div>
+        <h5>Marina T.</h5>
+        <p class="content">
+          Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+          ever since
+        </p>
+      </div>
+
+      <label for="slide-5" class="slide-control prev control-1">‹</label>
+      <label for="slide-4" class="slide-control next control-3">›</label>
+      <label for="slide-3" class="slide-control prev control-4">‹</label>
+      <label for="slide-2" class="slide-control next control-1">›</label>
+      <label for="slide-1" class="slide-control prev control-2">‹</label>
+      <label for="slide-5" class="slide-control next control-4">›</label>
+      <label for="slide-4" class="slide-control prev control-5">‹</label>
+      <label for="slide-3" class="slide-control next control-2">›</label>
+      <label for="slide-2" class="slide-control prev control-3">‹</label>
+      <label for="slide-1" class="slide-control next control-5">›</label>
+
+      <ol class="slide-indicador">
+        <li>
+          <label for="slide-1" class="slide-circulo">•</label>
+        </li>
+        <li>
+          <label for="slide-2" class="slide-circulo">•</label>
+        </li>
+        <li>
+          <label for="slide-3" class="slide-circulo">•</label>
+        </li>
+        <li>
+          <label for="slide-4" class="slide-circulo">•</label>
+        </li>
+        <li>
+          <label for="slide-5" class="slide-circulo">•</label>
+        </li>
+      </ol>
+
+    </div>
+  </div>
+  </section>
+  <!-------------------------------- FIN OPINIONES -------------------------------------->
+
+  <!-------------------------------- FORMULARIO SUSCRIPCIÓN -------------------------------------->
+  <section class="boletin">
+    <div class="seccion-destino">
+      <div class="enterate" id="enterate">
+        <h2>Entérate de todo</h2>
+        <div class="form">
+          <form action="#" method="POST">
+            <div class="name">
+              <label for="tnp-name">Nombre</label>
+              <input type="text" name="name" id="name" placeholder="" />
+            </div>
+            <div class="email">
+              <label for="tnp-email" required>Email*</label>
+              <input type="email" name="email" id="email" placeholder="" required />
+            </div>
+            <div>
+              <label class="container-policy">
+                <input type="checkbox" required />
+                Si continúas, aceptas la <a href="/assets/politicaPrivacidad/PoliticaPrivacidad.pdf"
+                  title="Política de privacidad" target="_blank"> Política de Privacidad</a>
+              </label>
+            </div>
+            <div>
+              <input type="submit" value="Suscribirse" />
+              <p id="cancelar-suscri">¿Cómo cancelar la suscripción?</p>
+            </div>
+          </form>
+        </div>
+        <hr class="fin-encab" />
+      </div>
+      <div id="ventana-modal" class="modal">
+        <div class="contenido-modal">
+          <span class="close">&times;</span>
+          <div class="contenedor-modal">
+            <h1 class="cancelar-suscri-bis">¿Cómo cancelar la suscripción?</h1>
+            <hr>
+            <p class="cancelar-suscri-parraf">Para dejar de recibir Newsletters solicítalo vía
+              <strong>kamile.ec@gmail.es</strong> o a través del enlace de BAJA o similar que aparece en los envíos. Tu
+              solicitud se tramitará en aproximadamente 72h, por lo que podrías recibir alguna comunicación comercial
+              durante este tiempo.
+            </p>
+            <hr>
+            <button class="btn-ok">OK</button>
+          </div>
+        </div>
+      </div>
+      <!-------------------------------- FIN FORMULARIO SUSCRIPCIÓN -------------------------------------->
+
+      <!-------------------------------- FOOTER -------------------------------------->
+
+      <footer>
+        <div class="seccion-destino-footer">
+          <div class="footer-clic">
+            <div class="siguenos">
+              <h5>Síguenos</h5>
+              <a href="https://es-es.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i>
+              </a>
+              <a href="https://www.instagram.com/kamile.ec/?hl=es" target="_blank">
+                <i class="fa-brands fa-instagram fa-2x"></i>
+              </a>
+              <div class="nombre-tienda">
+                <img class="kamile-logo-foot" src="/assets/img/Logos/logo_Kamile_sinfondo.png" alt="Logo Kamile" />
+              </div>
+            </div>
+            <div class="location-clic">
+              <h5>Contacto</h5>
+              <a href="https://www.google.com/intl/es/gmail/about/" target="_blank">
+                <i class="fa-solid fa-envelope"></i>
+                <span>kamile.ec@gmail.es</span>
+              </a>
+            </div>
+            <div class="location-clic">
+              <h5>Metodos de pago</h5>
+              <div class="metodos-pago">
+                <a href="#">
+                  <i class="fa-brands fa-cc-visa"></i><span class="pay-icon">Visa</span>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-cc-mastercard"></i><span class="pay-icon">Master Card</span>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-paypal"></i><span class="paypal-icon">PayPal</span>
+                </a>
+                <a href="#">
+                  <i class="fa-solid fa-gift"></i><span class="pay-icon">Tarjeta regalo</span>
+
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-container">
+            <div class="footer_bottom">
+              <hr class="separa-encab" />
+              <div class="condiciones-politicas">
+                <a href="#" title="Condiciones de uso" target="_blank"><strong>CONDICIONES DE USO</strong></a>
+                |
+                <a href="/assets/politicaPrivacidad/PoliticaPrivacidad.pdf" title="Política de privacidad"
+                  target="_blank">Política de privacidad</a>
+                |
+                <a href="/assets/politicaPrivacidad/PoliticaCookies.pdf" title="Politica de cookies"
+                  target="_blank"><b>POLÍTICA DE COOKIES</b></a>
+                |
+                <a href="#" title="Condiciones de Compra" target="_blank">Términos y condiciones de compra</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p>
+              Made with <i class="fa fa-heart"></i> by
+              <a href="https://github.com/David-Subiela" target="_blank">David</a>
+              <i class="fa-regular fa-copyright"></i> 2023
+            </p>
+          </div>
+        </div>
+      </footer>
+      <!-------------------------------- FIN FOOTER -------------------------------------->
+    </div>
+  </section>
+  <!-------------------------------- COOKIES -------------------------------------->
+  <div class="aviso-cookies" id="aviso-cookies">
+    <img class="galleta" src="/assets/img/svg/cookie.svg" alt="Galleta" />
+    <h3 class="titulo">Cookies</h3>
+    <p class="parrafo">
+      Utilizamos cookies propias y de terceros para mejorar nuestros
+      servicios.
+    </p>
+    <button class="boton" id="btn-aceptar-cookies">De acuerdo</button>
+    <br>
+    <a class="enlace" href="/html/html_pgPrincipal/index-aviso-cookies.html">Aviso de Cookies</a>
+  </div>
+  <div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
+  <!-------------------------------- FIN COOKIES -------------------------------------->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 2000,
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+    integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/js/js_pgPrincipal/script.js" type="module"></script>
+  <script src="/js/js_pgPrincipal/script-persistHeader.js"></script>
+  <script src="/js/js_pgPrincipal/script-cookies.js"></script>
+  <script src="/js/js_pgPrincipal/script-favCart.js"></script>
+  <script src="/js/js_pgPrincipal/script-loader.js"></script>
+  <script src="/js/js_pgPrincipal/script-shopCart.js"></script>
+</body>
+
+</html>

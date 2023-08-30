@@ -1,0 +1,153 @@
+/* FORM */
+.boletin {
+  /* background-color: #f8f7f7; */
+  background-color: var(--rose);
+  margin-top: 40px;
+  position: relative;
+}
+
+.enterate h2 {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+input[type="text"],
+input[type="email"] {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  color: #444;
+  background-color: #fff;
+  margin: 0 0 14px;
+  height: auto;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  display: block;
+  padding: 13px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #444;
+  width: 100%;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 25px 0;
+  border-radius: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--dark-rose);
+  color: black;
+}
+
+.container-policy a {
+  color: var(--black);
+  text-decoration: underline;
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+}
+
+#cancelar-suscri {
+  text-align: center;
+  font-size: 11px;
+  line-height: 16px;
+  text-decoration: underline;
+  font-weight: 600;
+  margin-bottom: 70px;
+  cursor: pointer;
+}
+
+/* MODAL */
+.modal {
+  display: none; /* POR DEFECTE, ESTARÁ OCULTO */
+  position: fixed; /* POSICIÓN FIJA */
+  z-index: 1; /* Se situará por encima de otros elementos de la página*/
+  padding-top: 200px; /* El contenido estará situado a 200px de la parte superior */
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  overflow: auto; /* Se activará el scroll si es necesario */
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro con opacidad del 50% */
+}
+
+/* VENTANA MODAL */
+.contenido-modal {
+  position: relative; /* RELATIVO RESPECTO AL CONTENEDOR MODAL */
+  background-color: #f2f2f2;
+  margin: auto; /* CENTRADA */
+  padding: 20px;
+  width: 60%;
+  animation-name: animarsuperior;
+  animation-duration: 0.5s;
+}
+
+@keyframes animarsuperior {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* BOTÓN CERRAR */
+.close {
+  color: black;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* BOTÓN OK */
+.btn-ok {
+  cursor: pointer;
+  display: block;
+  padding: 13px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #444;
+  width: 100%;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 25px 0;
+  border-radius: 10px;
+}
+
+.btn-ok:hover {
+  background-color: var(--dark-rose);
+  color: black;
+}
+
+/* DENTRO DEL MODAL: */
+.cancelar-suscri-bis {
+  text-align: center;
+  padding: 20px;
+}
+
+.cancelar-suscri-parraf {
+  padding: 30px;
+  font-size: 15px;
+}

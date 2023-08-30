@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/ccs_pgPrincipal/style.css" />
+    <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-whatsYflecha.css" />
+    <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-novedades.css" />
+    <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-footer.css" />
+    <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-envio.css" />
+    <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-suscribe.css" />
+    <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-testimonial.css" />
+    <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-buttonToltip.css" />
+    <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-cookies.css" />
+    <link rel="stylesheet" href="/css/ccs_pgPrincipal/style-form.css">
+    <link rel="icon" href="/assets/img/Logos/favicon2.png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Kamile EC - Login/Registro</title>
+</head>
+
+<body>
+    <div class="flecha-arriba">
+        <img src="/assets/img/Logos/flecha.png" alt="flecha" />
+    </div>
+    <div class="btn-whatsApp">
+        <a href="https://api.whatsapp.com/send?phone=+" class="btn-whatsApp" id="tooltip" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i><span class="tooltip-box">Contáctanos para conocer MÁS SOBRE NUESTROS
+                PRODUCTOS</span>
+        </a>
+    </div>
+    <!-------------------------------- ENCABEZADO -------------------------------------->
+    <header>
+        <div class="suscribete">
+            <ul class="slide-text">Gastos de envío gratis a partir de 65$</ul>
+            <ul class="slide-text">Inicia sesión como socio/a y disfruta de las ventajas</ul>
+            <ul class="slide-text">Consigue un 10% de decuento extra. Suscríbete a la newsletter</ul>
+        </div>
+        <nav class="encabezado-completo" id="encabezado-completo">
+            <div class="encabezado">
+                <div class="nombre-tienda">
+                    <img class="kamile-logo" src="/assets/img/Logos/logo_Kamile_sinfondo.png" alt="Logo Kamile" />
+                </div>
+                <div class="menu-encab">
+                    <ul class="menu-encab">
+                        <li>
+                            <a href="#novedades">Novedades</a>
+                        </li>
+                        <li>
+                            <a href="/html/html_ropa/index-ropa.html">Ropa</a>
+                        </li>
+                        <!-- <li>
+                            <a href="#">Zapatos</a>
+                        </li> -->
+                        <li>
+                            <a href="/html/html_complementos/index-complementos.html">Accesorios</a>
+                        </li>
+                        <li>
+                            <a class="rebajas" href="/html/html_rebajas/index-rebajas.html">Rebajas</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-icons">
+                    <div class="box">
+                        <input type="text" name="search" placeholder="Busca aquí tu producto" class="src"
+                            id="autocomplete-input" autocomplete="off" />
+                        <a href="#" title="Lista de deseos">
+                            <i class="fa-regular fa-heart fa-lg" alt="Lista de deseos"></i>
+                        </a>
+                        <a href="#" title="Carro compra">
+                            <i class="fa-solid fa-bag-shopping" alt="Carro Compra"></i>
+                        </a>
+                        <a href="/html/html_pgPrincipal/index-loginPass.html" title="Mi cuenta">
+                            <i class="fa-solid fa-circle-user" alt="Login"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="carro-compra-oculto">
+                    <a href="#" title="Carro compra">
+                        <i class="fa-solid fa-bag-shopping" alt="Carro Compra"></i>
+                    </a>
+                </div>
+                <div class="nav-icon-button" id="icon-button-appear">
+                    <button class="button-tooltip">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </button>
+                    <p class="button-tooltip-menu">Menú</p>
+                    <span class="tooltip-menu">Hola,<br />
+                        ¿Ya eres de Kamile?
+                        <button class="btn-light-menu">Identificarme</button>
+                        <span class="menu-registrate">
+                            ¿No tienes cuenta? <a class="register"
+                                href="/html/html_pgPrincipal/index-loginPass.html">Regístrate</a>
+                            <div class="menu-aparece">
+                                <hr class="oculto" />
+                                <ul class="menu-encab-oculto">
+                                    <li>
+                                        <a href="#novedades">Novedades</a>
+                                    </li>
+                                    <li>
+                                        <a href="/html/html_ropa/index-ropa.html">Ropa</a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href="#">Zapatos</a>
+                                    </li> -->
+                                    <li>
+                                        <a href="/html/html_complementos/index-complementos.html">Accesorios</a>
+                                    </li>
+                                    <li>
+                                        <a class="rebajas" href="/html/html_rebajas/index-rebajas.html">Rebajas</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </nav>
+
+        <hr class="fin-encab" />
+    </header>
+    <!-------------------------------- FIN ENCABEZADO -------------------------------------->
+
+    <!-------------------------------- LOGIN / REGISTRO -------------------------------------->
+
+    <section class="formularios">
+        <div class="account-page">
+            <div class="toggle-menu">
+                <div id="btn" class="btn-left"></div>
+                <button type="button" class="toggle-btn-register" data-action="toggle-recover-form">Regístrate</button>
+                <button type="button" class="toggle-btn-session" data-action="toggle-recover-form-login">Iniciar
+                    sesión</button>
+            </div>
+            <div class="form-regses">
+                <!-------------------------------- INICIAR SESIÓN -------------------------------------->
+                <form action="#" method="POST" class="ini-session">
+                    <div class="email">
+                        <input type="email" name="email" id="email" placeholder="Email*" required />
+                    </div>
+                    <div class="contraseña">
+                        <input type="password" name="password" id="password" placeholder="Contraseña*"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}"
+                            title="Escribe mínimo 10 caracteres. Entre ellos, al menos 1 número, 1 letra y 1 mayúscula."
+                            required />
+                    </div>
+                    <div class="accept-register">
+                        <input type="submit" value="INICIAR SESIÓN" />
+                        <a href="#ini-session-contra">
+                            <p class="pass-remain">¿Has olvidado tu contraseña?</p>
+                        </a>
+                    </div>
+                </form>
+                <!-------------------------------- FIN -- INICIAR SESIÓN -------------------------------------->
+
+                <!-------------------------------- INICIAR SESIÓN -- OLVIDO CONTRASEÑA -------------------------------------->
+                <form action="#" method="POST" class="ini-session-contra">
+                    <div class="email">
+                        <p>Escribe tu email y te mandaremos un correo con las instrucciones a seguir para restablecer tu
+                            contraseña</p>
+                        <input type="email" name="email" id="email" placeholder="Email*" required />
+                    </div>
+                    <div class="accept-register">
+                        <input type="submit" value="RESTABLECER CONTRASEÑA" />
+                    </div>
+
+                </form>
+                <!-------------------------------- FIN -- INICIAR SESIÓN -- OLVIDO CONTRASEÑA -------------------------------------->
+
+                <!-------------------------------- REGISTRO -------------------------------------->
+                <form action="#" method="POST" class="ini-register">
+                    <h2 class="section-title">REGÍSTRATE USANDO TU DIRECCIÓN DE EMAIL</h2>
+                    <div class="email">
+                        <input type="email" name="email" id="email" placeholder="Email*" required />
+                    </div>
+                    <div class="name">
+                        <input type="text" name="name" id="name" placeholder="Nombre" />
+                    </div>
+                    <div class="name">
+                        <input type="text" name="name" id="name" placeholder="Apellido" />
+                    </div>
+                    <div class="contraseña">
+                        <input type="password" name="password" id="password" placeholder="Contraseña*"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}"
+                            title="Escribe mínimo 10 caracteres. Entre ellos, al menos 1 número, 1 letra y 1 mayúscula."
+                            required />
+                        <p class="pass-explain">Debe tener 10 caracteres mínimo</p>
+                    </div>
+                    <div class="accept-register">
+                        <label class="form-privacity">
+                            <input type="checkbox" required />
+                            Si continúas, aceptas la
+                            <a href="/assets/politicaPrivacidad/PoliticaPrivacidad.pdf" title="Política de privacidad"
+                                target="_blank"> Política de Privacidad</a>
+                        </label>
+                        <input type="submit" value="¡ÚNETE A KAMILE!" />
+                    </div>
+                </form>
+                <!-------------------------------- FIN -- REGISTRO -------------------------------------->
+            </div>
+        </div>
+    </section>
+    <!-------------------------------- FIN LOGIN / REGISTRO -------------------------------------->
+
+
+    <!-------------------------------- FOOTER -------------------------------------->
+
+    <footer>
+        <div class="seccion-destino-footer">
+            <div class="footer-clic">
+                <div class="siguenos">
+                    <h5>Síguenos</h5>
+                    <a href="https://es-es.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kamile.ec/?hl=es" target="_blank">
+                        <i class="fa-brands fa-instagram fa-2x"></i>
+                    </a>
+                    <div class="nombre-tienda">
+                        <img class="kamile-logo-foot" src="/assets/img/Logos/logo_Kamile_sinfondo.png"
+                            alt="Logo Kamile" />
+                    </div>
+                </div>
+                <div class="location-clic">
+                    <h5>Contacto</h5>
+                    <a href="https://www.google.com/intl/es/gmail/about/" target="_blank">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>kamile.ec@gmail.es</span>
+                    </a>
+                </div>
+                <div class="location-clic">
+                    <h5>Metodos de pago</h5>
+                    <div class="metodos-pago">
+                        <a href="#">
+                            <i class="fa-brands fa-cc-visa"></i><span class="pay-icon">Visa</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-cc-mastercard"></i><span class="pay-icon">Master Card</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-paypal"></i><span class="paypal-icon">PayPal</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-gift"></i><span class="pay-icon">Tarjeta regalo</span>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-container">
+                <div class="footer_bottom">
+                    <hr class="separa-encab" />
+                    <div class="condiciones-politicas">
+                        <a href="#" title="Condiciones de uso" target="_blank"><strong>CONDICIONES DE USO</strong></a>
+                        |
+                        <a href="/assets/politicaPrivacidad/PoliticaPrivacidad.pdf" title="Política de privacidad"
+                            target="_blank">Política de privacidad</a>
+                        |
+                        <a href="/assets/politicaPrivacidad/PoliticaCookies.pdf" title="Politica de cookies"
+                            target="_blank"><b>POLÍTICA DE COOKIES</b></a>
+                        |
+                        <a href="#" title="Condiciones de Compra" target="_blank">Términos y condiciones de compra</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    Made with <i class="fa fa-heart"></i> by
+                    <a href="https://github.com/David-Subiela" target="_blank">David</a>
+                    <i class="fa-regular fa-copyright"></i> 2023
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-------------------------------- FIN FOOTER -------------------------------------->
+    </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 2000,
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/js_pgPrincipal/script.js" type="module"></script>
+    <script src="/js/js_pgPrincipal/script-persistHeader.js"></script>
+    <script src="/js/js_pgPrincipal/script-cookies.js"></script>
+    <script src="/js/js_pgPrincipal/script-favCart.js"></script>
+    <script src="/js/js_pgPrincipal/script-loginRegister.js"></script>
+</body>
+
+</html>
