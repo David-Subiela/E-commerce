@@ -141,13 +141,11 @@
                 <!-------------------------------- INICIAR SESIÓN -------------------------------------->
                 <form action="#" method="POST" class="ini-session">
                     <div class="email">
-                        <input type="email" name="email" id="email" placeholder="Email*" required />
+                        <input type="email" name="email" id="signin-email" placeholder="Email*" required />
                     </div>
                     <div class="contraseña">
-                        <input type="password" name="password" id="password" placeholder="Contraseña*"
-                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}"
-                            title="Escribe mínimo 10 caracteres. Entre ellos, al menos 1 número, 1 letra y 1 mayúscula."
-                            required />
+                        <input type="password" name="signin-password" id="signin-password" placeholder="Contraseña*"
+                            autocomplete="off" required />
                     </div>
                     <div class="accept-register">
                         <input type="submit" value="INICIAR SESIÓN" />
@@ -163,7 +161,7 @@
                     <div class="email">
                         <p>Escribe tu email y te mandaremos un correo con las instrucciones a seguir para restablecer tu
                             contraseña</p>
-                        <input type="email" name="email" id="email" placeholder="Email*" required />
+                        <input type="email" name="email" id="signin-out-email" placeholder="Email*" required />
                     </div>
                     <div class="accept-register">
                         <input type="submit" value="RESTABLECER CONTRASEÑA" />
@@ -173,27 +171,25 @@
                 <!-------------------------------- FIN -- INICIAR SESIÓN -- OLVIDO CONTRASEÑA -------------------------------------->
 
                 <!-------------------------------- REGISTRO -------------------------------------->
-                <form action="#" method="POST" class="ini-register">
+                <form action="#" method="POST" class="ini-register" id="ini-register">
                     <h2 class="section-title">REGÍSTRATE USANDO TU DIRECCIÓN DE EMAIL</h2>
+                    <div class="name">
+                        <input type="text" name="name" id="signup-name" placeholder="Nombre" />
+                    </div>
+                    <div class="name">
+                        <input type="text" name="apellido" id="signup-apellido" placeholder="Apellido" />
+                    </div>
                     <div class="email">
-                        <input type="email" name="email" id="email" placeholder="Email*" required />
-                    </div>
-                    <div class="name">
-                        <input type="text" name="name" id="name" placeholder="Nombre" />
-                    </div>
-                    <div class="name">
-                        <input type="text" name="name" id="name" placeholder="Apellido" />
+                        <input type="email" name="email" id="signup-email" placeholder="Email*" required />
                     </div>
                     <div class="contraseña">
-                        <input type="password" name="password" id="password" placeholder="Contraseña*"
-                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}"
-                            title="Escribe mínimo 10 caracteres. Entre ellos, al menos 1 número, 1 letra y 1 mayúscula."
+                        <input type="password" id="signup-password" placeholder="Contraseña*" autocomplete="off"
                             required />
                         <p class="pass-explain">Debe tener 10 caracteres mínimo</p>
                     </div>
                     <div class="accept-register">
                         <label class="form-privacity">
-                            <input type="checkbox" required />
+                            <input type="checkbox" />
                             Si continúas, aceptas la
                             <a href="/assets/politicaPrivacidad/PoliticaPrivacidad.pdf" title="Política de privacidad"
                                 target="_blank"> Política de Privacidad</a>
@@ -293,6 +289,8 @@
     <script src="/js/js_pgPrincipal/script-cookies.js"></script>
     <script src="/js/js_pgPrincipal/script-favCart.js"></script>
     <script src="/js/js_pgPrincipal/script-loginRegister.js"></script>
+    <script src="/app/firebase.js" type="module"></script>
+    <script src="/app/signupForm.js" type="module"></script>
 </body>
 
 </html>

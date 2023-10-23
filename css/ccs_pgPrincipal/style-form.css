@@ -1,7 +1,6 @@
 .section-title {
   margin-bottom: 30px;
 }
-
 .formularios {
   display: flex;
   flex-direction: column;
@@ -10,21 +9,17 @@
 }
 .form-regses {
   padding: 10px;
-  /* width: 55%; */
   display: flex;
   justify-content: center;
 }
-
 .account-page {
   background-color: #fff;
   min-height: 43.75rem;
   max-width: 40.25rem;
-  /*  margin: 0 auto; */
   box-shadow: 0 0 5px 5px #0000001a;
   border-radius: 6px;
   margin: 2.1rem;
 }
-
 .pass-explain {
   color: rgb(148, 148, 148);
   font-size: 13px;
@@ -36,9 +31,7 @@
   font-size: 17px;
   text-align: center;
 }
-
 .accept-register {
-  /* border: 1px solid rgb(148, 148, 148); */
   padding: 20px 10px;
   background-color: #f6f6f6;
   border-radius: 10px;
@@ -54,7 +47,6 @@
   background: #f6f6f6;
   position: relative;
 }
-
 .toggle-menu #btn {
   position: absolute;
   top: 10%;
@@ -62,10 +54,8 @@
   width: 50%;
   height: 80%;
   border-radius: 30px;
-  /* background: #ffffff; */
   transition: 0.3s all ease;
 }
-
 .toggle-menu .toggle-btn-register,
 .toggle-btn-session {
   border-radius: 30px;
@@ -75,7 +65,6 @@
   border: 0;
   outline: none;
   position: relative;
-  /* width: 49%; */
   font-size: 0.9rem;
 }
 
@@ -84,39 +73,46 @@
   background: #ffffff;
   color: #000000;
 }
-/* .toggle-btn-transi {
-  transition: 3s all ease;
-} */
 
 /* INPUTS */
-input#email,
-input#name,
-input#password {
+input[type="email"],
+input[type="password"] {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid var(--bondie-blue);
+  background-color: var(--white);
+}
+input#signup-email,
+input#signup-name,
+input#signup-apellido,
+input#signup-password {
   font-size: 15px;
   font-weight: 700;
   box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
-    0 0 8px var(--light-rose);
+    0 0 8px var(--light-blue);
   outline: 0 none;
   border-radius: 10px;
 }
-input#password {
+input#signup-password {
   margin: 0;
 }
 .email,
 .name,
+.apellido,
 .password {
   margin-bottom: 10px;
 }
-
-input#email:focus,
-input#name:focus,
-input#password:focus {
+input#signup-email:focus,
+input#signup-name:focus,
+input#signup-apellido:focus,
+input#signup-password:focus {
   box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
-    0 0 8px var(--dark-rose);
+    0 0 8px var(--bondie-blue);
   outline: 0 none;
 }
 
 /* ------------------- INICIAR SESIÓN  ------------------- */
+
 .ini-session {
   display: none;
   width: 75%;
@@ -143,10 +139,8 @@ input#password:focus {
 
 /* ------------------- REGISTRO  ------------------- */
 .ini-register {
-  /* display: none; */
   width: 75%;
 }
-
 @keyframes modal-newslet {
   100% {
     visibility: visible;
